@@ -5,7 +5,7 @@
 ## How u can contact with me?
   * [GitHub](https://github.com/Skiffong)
   * [Instagram](https://www.instagram.com/skiffon629)
-  * NickName in Discord (Raman Liubavitski (Skiffong)#8917*
+  * NickName in Discord Raman Liubavitski (Skiffong)#8917
 
     I'm an **engineer-avionic** for modern aircraft as Boeing 737 and Airbus A320. 
 Coding for me it's just a hobbie but I can’t stand still because I’m used to constantly evolving and learning new things.
