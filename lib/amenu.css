@@ -1,0 +1,45 @@
+.amenu__item {
+    word-wrap: normal;
+}
+
+.amenu__burger {
+    position: relative;
+}
+
+.amenu__burger-open .amenu__burger-list{
+    display: block;
+}
+
+.amenu__burger-btn {
+    float:right;
+    display: none;
+    width: 55px;
+    height: 55px;
+    border: none;
+    cursor: pointer;
+    background-size: contain;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/menu_icon.svg");
+    transition: background-image 300ms;
+}
+.amenu__burger-btn.amenu__burger-btn_active {
+    display: block;
+}
+
+.amenu__burger-btn:hover {
+    background-image: url("../img/menu_icon_open.svg");
+}
+
+.amenu__burger-list {
+    position: absolute;
+    right: 25%;
+    list-style: none;
+    display: none;
+}
+
+.amenu__burger-list a{
+    padding: 0;
+    }
+
