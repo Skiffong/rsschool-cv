@@ -1,17 +1,19 @@
 /*normalize of css*/
 html {
-  box-sizing:border-box;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 body {
   font-family: Poppins, sans-serif;
-  background-color: #c0aaa86e;
+  height: 100vh;
 }
 
 h1 {
   font-family: 'Abril Fatface', serif;
   font-size: 2em;
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -34,53 +36,184 @@ h1 {
 }
 
 /* header */
-.menu {
-  overflow: hidden;
-  background-color: #cfc0be;
-  padding: 10px 0px;
-  transition: 0.4s;
+.header {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 99;
+  left: 0;
+  z-index: 3;
+  
 }
 
-.menu a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 1.2em;
-  line-height: 1.75em;
-  border-radius: 4px;
+.header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #C0AAA8;
+  z-index: 2;
 }
 
-.menu .logo {
-  transition: 0.4s;
-  max-width: 150px;
-  margin-right: 50px;
-  padding: 15px 0;
-}
-
-.menu__list a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.navbamenu__list a.active {
-  background-color: #245852;
-  color: white;
-}
-
-.menu__list {
-  transition: 0.4s;
-  float: right;
+.header__body {
+  position: relative;
   display: flex;
-  padding-top: 50px;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  transition: all 0.3s ease 0s;
 }
 
+.header__logo {
+  flex: 0 0 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
 
+.header__logo img {
+  display: block;
+  max-width: 100%;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__list {
+    display: flex;
+      position: relative;
+      z-index: 3;
+}
+.header__list li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.header__link {
+  color: #01996D;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header__list a:hover {
+  /*написать ховер для ссылок*/
+}
+
+.header__list a.active {
+  /*написать active для ссылок*/
+}
+
+@media screen and (max-width: 760px) {
+  .header__burger {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      z-index: 10;
+    }
+  
+    .header__burger span {
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 100%;
+      height: 2px;
+      background-color: #01996D;
+      transition: all 0.3s ease 0s;
+    }
+  
+    .header__burger:before,
+    .header__burger:after {
+      content: '';
+      background-color: #01996D;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s ease 0s;
+    }
+  
+    .header__burger:before {
+      top: 0;
+    }
+  
+    .header__burger:after {
+      bottom: 0;
+    }
+  
+    .header__burger.active:before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+  
+    .header__burger.active:after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+  
+    .header__burger.active span {
+      transform: scale(0)
+    }
+  
+    .header__menu {
+      position: fixed;
+      overflow: auto;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #dacfce;
+      padding-top: 70px;
+      transition: all 0.3s ease 0s;
+    }
+  
+    .header__menu.active {
+      top: 0;
+    }
+  
+    .header__body {
+      height: 50px;
+    }
+  
+    .header__logo {
+      flex: 0 0 40px;
+    }
+  
+    .header__list {
+      display: block;
+    }
+  
+    .header__list li {
+      margin-bottom: 20px;
+    }
+  
+    body.lock {
+      overflow: hidden;
+    }
+}
+
+.content {
+  padding-top: 100px;
+}
+
+.content__text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.content__text p {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 760px) {
+  .content {
+    padding-top: 50px;
+  }
+}
 /* about */
 
 /* skills */
