@@ -18,23 +18,32 @@ document.addEventListener("DOMContentLoaded", () => {
     lock.classList.remove("lock");
   };
 
-  let screenWidth = document.documentElement.clientWidth
-  if ( screenWidth >= 768) {
-    window.onscroll = function () {
-      scrollFunction();
-    };
-   
-    function scrollFunction() {
-      if (
-        document.body.scrollTop > 80 ||
-        document.documentElement.scrollTop > 80
-      ) {
-        header__body.style.height = "50px";
-      } else {
-        header__body.style.height = "80px";
-      }
+  //scroll
+  function scrollFunction() {
+    if (document.documentElement.clientWidth >= 768) {
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          header__body.style.height = "50px";
+        } else {
+          header__body.style.height = "80px";
+        }
+      };
     }
   }
-
-  
+  window.addEventListener(
+    "resize",
+    () => {
+      if (document.documentElement.clientWidth >= 768) {
+        window.onscroll = function () {
+          scrollFunction();
+        };
+      } else {
+        header__body.style.height = "50px";
+      }
+    },
+    true
+  );
 });
