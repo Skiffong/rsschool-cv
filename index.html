@@ -1,12 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mrWebDragon</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/7b3d98a14c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body id="default">
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__body">
+            <a href="#default" class="header__logo">
+              <img src="img/4.png" alt="logo" />
+            </a>
+            <div class="header__burger">
+              <span></span>
+            </div>
+            <nav class="header__menu">
+              <ul class="header__list">
+                <li><a class="header__link" href="#about">About</a></li>
+                <li><a class="header__link" href="#skills">Skills</a></li>
+                <li><a class="header__link" href="#projects">Projects</a></li>
+                <li><a class="header__link" href="#contacts">Contacts</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="container">
+          <section class="introdaction">
+            <div class="introdaction__photo">
+              <img src="img/my_photo.jpg" alt="My photo" />
+            </div>
+            <div class="introdaction__content">
+              <h1 class="introdaction__title">
+                Greetings to you
+                <br />
+                in the dragon cave
+              </h1>
+              <p class="introdaction__text">
+                My name is Raman Liubavitski and I’m a future web developer
+              </p>
+              <a href="#about" class="introdaction__button">recognize me</a>
+            </div>
+          </section>
+          <section class="about" id="about">
+            <div class="container">
+              <div class="about__title"><h2>Let me tell...</h2></div>
+              <div class="about__content">
+                <h3 class="about__content-title">... you who I am</h3>
+                <p class="about__content-text">
+                  I’m an avionic engineer for modern aircraft as Boeing 737 and
+                  Airbus A320. Having started as a technical engineer for
+                  aircraft maintenance TU-134, YAK-42, IL-76 and worked with
+                  documentation and laboratory tests, then I switched to direct
+                  maintenance of IL-76 aircraft as an engineer on periodic forms
+                  in the direction of avionics engineer. I was promoted to
+                  station chief, managing a team of 10 people. I organized and
+                  directly participated in the maintenance of the IL-76
+                  aircraft.
+                </p>
+                <p class="about__content-text">
+                  I received theoretical and practical training at the Boeing
+                  737 CL+NG, Airbus A320 family in the specialty of B2.Since the
+                  spring of 2021 I have been performing maintenance on Boeing
+                  737 and Airbus A320 aircraft as engineer B2.
+                </p>
+                <h3 class="about__content-title">... my English level</h3>
+                <p class="about__content-text">B2 for writing and reading, B1 for speaking</p>
+
+                <h3 class="about__content-title">...why mr.Dragon</h3>
+                <div class="about__content-block">
+                  <div class="about__content-text">
+                    <p>
+                      I’ve always loved dragons, their wisdom, greatness,
+                      serenity, but at the same time a certain danger. And a few
+                      years ago, I realized that there was a dragon inside me.
+                    </p>
+                    <p>
+                      Then I had a tattoo of a dragon’s head done. Since then,
+                      not only has a dragon been inside me, but also outside.
+                    </p>
+                    <p>
+                      Coding is just a hobbie for me but I can’t stand still
+                      because I’m used to constantly developing and learning new
+                      things. I also want to make my hobby an additional source
+                      of income. Besides, I’m quick on the uptake.
+                    </p>
+                  </div>
+
+                  <img
+                    src="img/about_photo.jpg"
+                    alt="photo about me"
+                    class="about__content-photo"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="skills" id="skills">
+            <h2 class="skills__title">My programming skills</h2>
+            <ul class="skill__list">
+              <li class="skill__item">html</li>
+              <li class="skill__item">css</li>
+              <li class="skill__item">scss</li>
+              <li class="skill__item">js</li>
+              <li class="skill__item">gulp</li>
+              <li class="skill__item">git</li>
+              <li class="skill__item">bem</li>
+              <li class="skill__item">bootstrap</li>
+              <li class="skill__item">figma</li>
+            </ul>
+          </section>
+          <section class="projects" id="projects">
+            <div class="container">
+              <div class="projects__courses">
+                <div class="project__courses--card">
+                  <div class="card__header">
+                    <img src="img/html.svg" alt="html icon" />
+                  </div>
+                  <div class="card__body">
+                    <div class="card__body-info">
+                      <span>
+                        3
+                        <img class="star" src="img/star.svg" alt="star icon" />
+                        261
+                        <b>points</b>
+                      </span>
+                    </div>
+                    <a
+                      href="https://my-learning.w3schools.com/tutorial/html"
+                      target="_blank"
+                    >
+                      <h3 class="card__body-title">
+                        Learn HTML
+                        <i>w3schools.com</i>
+                      </h3>
+                    </a>
+
+                    <p class="card__body-lvl">
+                      <b>77</b>
+                      of
+                      <b>77</b>
+                      lessons completed
+                    </p>
+                    <p class="card__body-lvl">
+                      <b>100%</b>
+                      quiz completed
+                    </p>
+                    <p class="card__body-lvl">
+                      <b>88</b>
+                      of
+                      <b>88</b>
+                      exercises completed
+                    </p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="card__footer--progress">
+                      <span class="progress__percent">100%</span>
+                      <div class="progress__bar">
+                        <div class="progress__bar-html"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="project__courses--card">
+                  <div class="card__header">
+                    <img src="img/css.svg" alt="css icon" />
+                  </div>
+                  <div class="card__body">
+                    <div class="card__body-info">
+                      <span>
+                        3
+                        <img class="star" src="img/star.svg" alt="star icon" />
+                        365
+                        <b>points</b>
+                      </span>
+                    </div>
+                    <a
+                      href="https://my-learning.w3schools.com/tutorial/css"
+                      target="_blank"
+                    >
+                      <h3 class="card__body-title">
+                        Learn CSS
+                        <i>w3schools.com</i>
+                      </h3>
+                    </a>
+                    <p class="card__body-lvl">
+                      <b>127</b>
+                      of
+                      <b>127</b>
+                      lessons completed
+                    </p>
+                    <p class="card__body-lvl">
+                      <b>100%</b>
+                      quiz completed
+                    </p>
+                    <p class="card__body-lvl">
+                      <b>138</b>
+                      of
+                      <b>138</b>
+                      exercises completed
+                    </p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="card__footer--progress">
+                      <span class="progress__percent">100%</span>
+                      <div class="progress__bar">
+                        <div class="progress__bar-css"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="project__courses--card">
+                  <div class="card__header">
+                    <img src="img/js.svg" alt="js icon" />
+                  </div>
+                  <div class="card__body">
+                    <div class="card__body-info">
+                      <span>
+                        2
+                        <img class="star" src="img/star.svg" alt="star icon" />
+                        180
+                        <b>points</b>
+                      </span>
+                    </div>
+                    <a
+                      href="https://my-learning.w3schools.com/tutorial/js"
+                      target="_blank"
+                    >
+                      <h3 class="card__body-title">
+                        Learn JS
+                        <i>w3schools.com</i>
+                      </h3>
+                    </a>
+                    <p class="card__body-lvl">
+                      <b>13</b>
+                      of
+                      <b>158</b>
+                      lessons completed
+                    </p>
+                    <p class="card__body-lvl">
+                      <b>100%</b>
+                      quiz completed
+                    </p>
+                    <p class="card__body-lvl">
+                      <b>67</b>
+                      of
+                      <b>67</b>
+                      exercises completed
+                    </p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="card__footer--progress">
+                      <span class="progress__percent">69%</span>
+                      <div class="progress__bar">
+                        <div class="progress__bar-js"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project__example">
+                <div class="project__example-site">
+                  <h2>My pet project</h2>
+                  <a href="https://skiffong.github.io/Desire/" target="_blank">
+                    <img src="img/my_site.jpg" alt="my pet project" />
+                  </a>
+                </div>
+                <div class="project__example-code">
+                  <pre><code>
+  function converttoArabic(str) { 
+    if (!/^[IVXLC]+$/i.test(str)) 
+      throw new Error(&quot;invalid expression&quot;); 
+    return 
+      str 
+        .toUpperCase() 
+        .split(&quot;&quot;)
+        .reduce(function (r, v, i, arr) { 
+          const [a, b, c] = 
+          [numbers[arr[i]], 
+          numbers[arr[i + 1]],
+          numbers[arr[i + 2]],]; 
+    if (b &amp;&amp; c &amp;&amp; a &lt;= b &amp;&amp;
+        b &lt; c) 
+      throw new Error(&quot;invalid expression&quot;); 
+    return b &gt; a ? r - a : r + a; }, 0); }
+                  </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer" id="contacts">
+        <div class="container">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a
+                href="https://www.linkedin.com/in/raman-liubavitski-69985916b/"
+                target="_blank"
+              >
+                <div class="icon linkedin">
+                  <div class="tooltip">Linkedin</div>
+                  <span><i class="fab fa-linkedin-in"></i></span>
+                </div>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="https://vk.com/ffisk" target="_blank">
+                <div class="icon vkontakte">
+                  <div class="tooltip">VKontakte</div>
+                  <span><i class="fab fa-vk"></i></span>
+                </div>
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a href="https://www.instagram.com/skiffon629/" target="_blank">
+                <div class="icon instagram">
+                  <div class="tooltip">Instagram</div>
+                  <span><i class="fab fa-instagram"></i></span>
+                </div>
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a href="https://github.com/Skiffong" target="_blank">
+                <div class="icon github">
+                  <div class="tooltip">Github</div>
+                  <span><i class="fab fa-github"></i></span>
+                </div>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="https://rs.school/js/" target="_blank">
+                <div class="icon rsschool">
+                  <div class="tooltip">RSS</div>
+                  <span><i class="fab fa-rsschool"></i></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="footer__copyright">
+            <span>2022</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
