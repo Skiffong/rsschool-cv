@@ -39,6 +39,6 @@ I also want to make my hobby an additional source of income.
   }
   ```
 
-I have no real experience working as a programmer, but [here](https://skiffong.github.io/Desire/) my pet-project.
+I have experience working as a freelance programmer, and [here](https://skiffong.github.io/Desire/) my real and pet-project.
 
-I am fluent in English with an excellent understanding of technical documentation and a good letter. Spoken English is a little behind because of the chatter of constant practice. 
+My English lvl is B2
