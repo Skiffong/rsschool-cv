@@ -101,7 +101,7 @@ h3 {
 .header__list li {
   list-style: none;
   margin-left: 20px;
-    position: relative;
+  position: relative;
 }
 
 .header__link {
@@ -118,7 +118,8 @@ h3 {
 .header__link:active {
   letter-spacing: 5px;
 }
-.header__link:focus{
+
+.header__link:focus {
   background-color: #EFE6E4;
   padding: 5px;
 }
@@ -285,7 +286,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 1.3px;
   color: #ffffff;
-  background: linear-gradient(90deg,rgb(66, 148, 138) 0%, rgb(36, 88, 82) 50%, rgb(66, 148, 138) 100%);
+  background: linear-gradient(90deg, rgb(66, 148, 138) 0%, rgb(36, 88, 82) 50%, rgb(66, 148, 138) 100%);
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
@@ -374,26 +375,29 @@ h3 {
   .introdaction__text {
     padding: 15px 0;
   }
-.introdaction__button:before {
-  min-width: calc(220px + 12px);
-  min-height: calc(50px + 12px);
-}
+
+  .introdaction__button:before {
+    min-width: calc(220px + 12px);
+    min-height: calc(50px + 12px);
+  }
+
   .introdaction__button {
     padding: 10px 30px;
   }
-    @keyframes ring {
-      0% {
-        width: 15px;
-        height: 15px;
-        opacity: 1;
-      }
-  
-      100% {
-        width: 150px;
-        height: 150px;
-        opacity: 0;
-      }
+
+  @keyframes ring {
+    0% {
+      width: 15px;
+      height: 15px;
+      opacity: 1;
     }
+
+    100% {
+      width: 150px;
+      height: 150px;
+      opacity: 0;
+    }
+  }
 }
 
 /* about */
@@ -619,7 +623,7 @@ h3 {
 
 .progress__bar-js {
   background-color: #282a35;
-  width: 69%;
+  width: 83%;
   height: 8px;
   margin: -1px;
   border-radius: inherit;
@@ -639,6 +643,16 @@ h3 {
   word-wrap: normal;
   border-radius: 50px;
   background-color: #C0AAA8;
+}
+
+.project__real-site {
+  margin: 0 0 40px 0;
+  display: block;
+}
+
+.project__real-site img {
+  border-radius: 50px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 993px) {
