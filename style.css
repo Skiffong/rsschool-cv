@@ -101,6 +101,7 @@ h3 {
 .header__list li {
   list-style: none;
   margin-left: 20px;
+  position: relative;
 }
 
 .header__link {
@@ -108,14 +109,46 @@ h3 {
   text-transform: uppercase;
   font-size: 1.2em;
   font-weight: bold;
+  letter-spacing: 0;
+  transition: all 0.3s ease 0s;
+  position: relative;
 }
 
-.header__list a:hover {
-  /*написать ховер для ссылок*/
+.header__link:hover,
+.header__link:active {
+  letter-spacing: 5px;
 }
 
-.header__list a.active {
-  /*написать active для ссылок*/
+.header__link:focus {
+  background-color: #EFE6E4;
+  padding: 5px;
+}
+
+.header__link:after,
+.header__link:before {
+  backface-visibility: hidden;
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  background-color: #245852;
+  transition: all 280ms ease-in-out;
+  width: 0;
+  height: 1px;
+}
+
+.header__link:hover:after,
+.header__link:hover:before {
+  backface-visibility: visible;
+  transition: width 350ms ease-in-out;
+  width: 100%;
+}
+
+.header__link:hover:before {
+  bottom: auto;
+  top: 0;
+  height: 2px;
 }
 
 @media screen and (max-width: 768px) {
@@ -202,6 +235,7 @@ h3 {
     margin-bottom: 20px;
   }
 
+
   body.lock {
     overflow: hidden;
   }
@@ -228,6 +262,7 @@ h3 {
 
 .introdaction__photo {
   flex: 0 1 75vw;
+  max-width: 700px;
 }
 
 .introdaction__photo img {
@@ -246,13 +281,80 @@ h3 {
 }
 
 .introdaction__button {
-  align-items: center;
-  padding: 15px 40px;
-  background: #01996D;
-  border: 1px solid #01996D;
-  border-radius: 4px;
-  color: #ffffff;
+  min-width: 300px;
+  min-height: 60px;
   text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: #ffffff;
+  background: linear-gradient(90deg, rgb(66, 148, 138) 0%, rgb(36, 88, 82) 50%, rgb(66, 148, 138) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 15px 70px;
+}
+
+.introdaction__button:before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid rgb(66, 148, 138);
+  box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.introdaction__button:hover,
+.introdaction__button:focus {
+  color: #C0AAA8;
+  transform: translateY(-6px);
+}
+
+.introdaction__button:hover:before,
+.introdaction__button:focus:before {
+  opacity: 1;
+}
+
+.introdaction__button:after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid rgb(66, 148, 138);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.introdaction__button:hover::after,
+.introdaction__button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -274,8 +376,27 @@ h3 {
     padding: 15px 0;
   }
 
+  .introdaction__button:before {
+    min-width: calc(220px + 12px);
+    min-height: calc(50px + 12px);
+  }
+
   .introdaction__button {
     padding: 10px 30px;
+  }
+
+  @keyframes ring {
+    0% {
+      width: 15px;
+      height: 15px;
+      opacity: 1;
+    }
+
+    100% {
+      width: 150px;
+      height: 150px;
+      opacity: 0;
+    }
   }
 }
 
@@ -326,7 +447,7 @@ h3 {
 }
 
 .about__content-photo {
-  max-width: 25vw;
+  max-width: 320px;
   height: 100%;
   border-radius: 5%;
   opacity: 0.8;
@@ -408,7 +529,7 @@ h3 {
   padding: 16px 20px 0;
 }
 
-.card__body a{
+.card__body a {
   color: #245852;
 }
 
@@ -454,7 +575,8 @@ h3 {
 .card__body-title {
   margin: 10px 0;
 }
-.card__body-title i{
+
+.card__body-title i {
   font-size: 14px;
 }
 
@@ -501,7 +623,7 @@ h3 {
 
 .progress__bar-js {
   background-color: #282a35;
-  width: 69%;
+  width: 83%;
   height: 8px;
   margin: -1px;
   border-radius: inherit;
@@ -510,7 +632,8 @@ h3 {
 .project__example-site {
   margin: 30px 0;
 }
-.project__example-site h2{
+
+.project__example-site h2 {
   text-align: center;
   padding-bottom: 10px;
 }
@@ -520,6 +643,16 @@ h3 {
   word-wrap: normal;
   border-radius: 50px;
   background-color: #C0AAA8;
+}
+
+.project__real-site {
+  margin: 0 0 40px 0;
+  display: block;
+}
+
+.project__real-site img {
+  border-radius: 50px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 993px) {
